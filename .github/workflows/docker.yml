@@ -31,3 +31,10 @@ jobs:
           context: .
           push: true
           tags: hooopo/oss-fe:latest
+      - 
+        name: Build and push1
+        uses: docker/build-push-action@v3
+        with:
+          context: "{{defaultContext}}:backend"
+          push: true
+          tags: hooopo/oss-data:latest
